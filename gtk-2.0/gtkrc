@@ -47,8 +47,11 @@ style "murrine-default"
 	GtkPaned       ::handle-size		= 6 # Width of handles.
 
 	GtkRange       ::trough-border		= 0
-	GtkRange       ::slider-width		= 15 # Scrollbar width.
-	GtkRange       ::stepper-size		= 15 # Stepper height.
+	GtkRange       ::slider-width		= 8 # Scrollbar width.
+	GtkRange       ::stepper-size		= 0 # Stepper height.
+
+    GtkScrollbar::has_forward_stepper  = 0
+    GtkScrollbar::has_backward_stepper = 0
 
 	GtkScale       ::slider-length		= 24 # Length of sliders.
 	GtkScale       ::trough-side-details	= 1
@@ -123,12 +126,12 @@ style "murrine-default"
 		menuitemstyle		= 1 # 0 = flat, 1 = glassy, 2 = striped.
 		listviewheaderstyle	= 1 # 0 = flat, 1 = glassy, 2 = raised.
 		listviewstyle		= 0 # 0 = nothing, 1 = dotted.
-		scrollbarstyle		= 2 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles.
+		scrollbarstyle		= 0 # 0 = nothing, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles.
 		roundness		= 2  # Overall roundness of the theme.
 		animation		= TRUE  # FALSE disables progressbar animations.
-		progressbarstyle	= 1 # 0 = nothing, 1 = striped, 2 = cells
+		progressbarstyle	= 2 # 0 = nothing, 1 = striped, 2 = cells
 		stepperstyle		= 1 # 0 = standard, 1 = integrated stepper handles.
-                gradients		= TRUE # enables gradients.
+#                gradients		= TRUE # enables gradients.
 		reliefstyle		= 2 # shadows around widgets.
 		sliderstyle		= 1 # 0 = nothing added, 1 = handles.
 		menustyle		= 0 # removes stripes from menus.
@@ -321,7 +324,7 @@ style "murrine-radiocheck" = "murrine-default"
 ##############
 style "murrine-scrollbar"
 {
-	GtkRange::trough-border	= 2 # Change to 0 for normal scrollbars.
+	GtkRange::trough-border	= 0 # Change to 0 for normal scrollbars.
 	bg[NORMAL]	= @bg_color # Color for non-colored scrollbars.
 	bg[INSENSITIVE]	= @bg_color # Color for non-colored scrollbars.
 	bg[PRELIGHT]	= @bg_color # Color for scrollbar prelight? (probably obsolete)
