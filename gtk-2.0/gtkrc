@@ -181,7 +181,7 @@ style "murrine-button" = "murrine-wider"
 
 style "murrine-notebook-bg"
 {
-	bg[NORMAL]	= shade (1.15, @bg_color) # Tab background.
+	bg[NORMAL]	= shade (1.55, @bg_color) # Tab background.
 	bg[ACTIVE]	= shade (1.05, @bg_color) # Unfocused tab background.
 }
 
