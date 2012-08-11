@@ -1,0 +1,116 @@
+Autor: Rafa Cobreros rafacobreros@gmail.com
+Licencia: GPL
+Original theme en: http://gnome-look.org/content/show.php/MediterraneanNight?content=148398
+
+Personalización del tema:
+1.- Estilo de nautilus
+2.- Estilo de los botones de la barra de titulos (titlebar)
+3.- Estilo de tabs
+4.- Arreglar botones de Synaptic y Gimp
+5.- Habilitar/deshabilitar0 el uso de imagenes .svg para checkbox/radiobuttons (GTK2)
+
+------------------------------------
+* 1.- Seleccionar estilo para nautilus *
+------------------------------------
+Editar (gedit) el archivo ../MediterraneanDark/gtk-3.0/gtk.css
+
+Ve a la ultima linea y encontraras 4 opciones para nautilus:
+
+	1.- "gnome-applications-gray.css"  		(nautilus sidebar y toolbar gris oscuro)
+	2.- "gnome-applications-unity.css" 		(nautilus sidebar y toolbar gris oscuro para UNITY)
+	3.- "gnome-applications-light.css" 		(nautilus sidebar azulado y toolbar claro))
+	4.- "gnome-applications-gray-light.css" (nautilus sidebar gris oscuro y toolbar claro)
+	
+modifica la linea "@import" para que se corresponda con el estilo que buscas,
+de forma que quede como una de las cuatro lineas de abajo.
+(ten cuidado de dejar solo UNA de las cuatro)
+
+@import url("gnome-applications-gray.css");
+o
+@import url("gnome-applications-unity.css");
+o 
+@import url("gnome-applications-light.css");
+o
+@import url("gnome-applications-gray-light.css");
+
+
+------------------------------------------------------------------------------
+* 2.- Seleccionar estilo de los botones de la barra de titulos de la ventana *
+------------------------------------------------------------------------------
+Si prefieres tener los botones brillantes en la barra de titulos, al estilo de apple:
+
+Copia el contenido del archivo "metacity_buttons_glassy.tar.gz" en la carpeta "../MediterraneanDark/metacity-1/"
+
+Para restaurar los iniciales:
+
+Copia el contenido del archivo "metacity_buttons_normal.tar.gz" en la carpeta "../MediterraneanDark/metacity-1/"
+
+idem para los botones de la barra de Unity
+copia el contenido de unity_buttons_glassy.tar.gz en la carpeta .. /MediterraneanDark/unity/
+o
+copia el contenido de unity_buttons_normal.tar.gz en la carpeta .. /MediterraneanDark/unity/
+
+NOTA:
+	- Es conveniente cerrar y abrir sesión despues de hacer los cambios
+
+----------------------------------
+* 3.- Seleccionar estilo de TABS *
+----------------------------------
+Editar (gedit) el archivo ../MediterraneanDark/gtk-3.0/gtk.css
+
+Ve a la linea donde pone 
+@import url("tabs-dark.css");
+
+y modificala segun la opcion que desees
+
+1.- tabs gris obscuro 
+@import url("tabs-dark.css");
+
+2.- tabs color azul del tema
+@import url("tabs-themed.css");
+
+3.- tabs grid claro con resalte azul 
+@import url("tabs.css");
+
+4.- tabs gris claro con resalte gris obscuro
+@import url("tabs-mono.css");
+
+5.- Estilo de tabs mas traditional
+@import url("tabs-classic.css");
+
+(ten cuidado de dejar solo UNA de las cinco anteriores)
+
+-------------------------------------------
+* 4.- Arreglar botones de Synaptic y Gimp *
+-------------------------------------------
+Nota: No he puesto el arreglo por defecto porque sacrifica la calidad de los radio-button de gtk2.
+
+Editar (gedit) el archivo:
+/MediterraneanDark/gtk-2.0/gtkrc
+
+Buscar la linea (por el final del archivo, cerca de la linea 860):
+widget_class "*<GtkRadioButton>*"				style:highest "radiobutton"
+
+y sustituirla por:
+widget_class "*<GtkRadioButton>*"				style:highest "checkradio"
+
+-------------------------------------------------------------------------------
+5.- Habilitar/deshabilitar0 el uso de imagenes .svg para checkbox/radiobuttons
+-------------------------------------------------------------------------------
+Editar (gedit) el archivo:
+/MediterraneanDark/gtk-2.0/gtkrc
+Busca la siguiente seccion (cerca del final, por la linea 860) y sigua las intrucciones
+##########################################################################
+# Radiobutton and Checkbox
+##########################################################################
+# Si tienes problemas para ver los checkbox y radiobuttons in gtk2
+# descomenta(habilita) las dos lineas de abajo (quita el simbolo # del principio de la linea)
+
+# widget_class "*<GtkCheckButton>*"				style "checkradio"
+# widget_class "*<GtkRadioButton>*"				style "checkradio"
+
+# Y comenta(deshabilita) estas de abajo (pon el simbolo # al principio de la linea)
+ widget_class "*<GtkCheckButton>*"				style "checkbutton"
+ widget_class "*<GtkRadioButton>*" 				style "radiobutton"
+##########################################################################
+
