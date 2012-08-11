@@ -283,20 +283,20 @@ GtkScale.progressbar.vertical {
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;    
-	-unico-border-gradient: -gtk-gradient (linear,
-							left top, left bottom,
-							from (shade (#80B8EA, 0.70)),
-							to (shade (#80B8EA, 0.60)));
+	/* -unico-border-gradient: -gtk-gradient (linear, */
+	/* 						left top, left bottom, */
+	/* 						from (shade (#80B8EA, 0.70)), */
+	/* 						to (shade (#80B8EA, 0.60))); */
 }
 
 .progressbar.vertical {
     border-width: 1px;
     border-style: solid;
     border-radius: 4px;    
-	-unico-border-gradient: -gtk-gradient (linear,
-							left top, left bottom,
-							from (shade (#80B8EA, 0.70)),
-							to (shade (#80B8EA, 0.60)));
+	/* -unico-border-gradient: -gtk-gradient (linear, */
+	/* 						left top, left bottom, */
+	/* 						from (shade (#80B8EA, 0.70)), */
+	/* 						to (shade (#80B8EA, 0.60))); */
 }
 
 GtkScale.slider,

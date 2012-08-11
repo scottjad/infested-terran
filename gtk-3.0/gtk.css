@@ -19,7 +19,7 @@
 @define-color theme_tooltip_bg_color @tooltip_bg_color;
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
 
-@define-color theme_selected_bg_color shade(#335A85, 1.00);
+@define-color theme_selected_bg_color shade(#696969, 0.85);
 @define-color theme_selected_fg_color @selected_fg_color;
 
 @define-color menu_bg_color shade(@theme_bg_dark_color, 0.35);
