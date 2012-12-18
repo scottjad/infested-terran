@@ -9,3 +9,5 @@ by Rafa Cobreros.
 
 The GTK2 theme is a slight modification of Murrine Brave Dark from
 Murrine-Colors, written by Victor C.
+
+![Screenshot of Infested-Terran Theme](http://jaderholm.com/tmp/2012-12-18-infested-terran-gtk2.png)
